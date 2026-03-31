@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FlaskConical, Funnel, BrainCircuit, ArrowRight } from "lucide-react";
+import { FlaskConical, Filter, BrainCircuit, ArrowRight } from "lucide-react";
 
 const pillars = [
   {
