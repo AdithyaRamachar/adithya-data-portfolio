@@ -8,7 +8,7 @@ const pillars = [
     desc: "Every feature is a hypothesis. I design controlled experiments with clear success metrics before committing engineering resources.",
   },
   {
-    icon: Funnel,
+    icon: Filter,
     title: "Funnel Optimization",
     desc: "I map the full user journey, identify friction points with data, and prioritize interventions by expected revenue impact.",
   },
