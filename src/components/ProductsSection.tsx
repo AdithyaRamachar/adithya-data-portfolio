@@ -46,7 +46,7 @@ const ProductsSection = () => (
         <p className="text-muted-foreground font-sans mb-10">End-to-end systems I've designed and shipped.</p>
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
         {products.map((product, i) => (
           <motion.div
             key={product.title}
