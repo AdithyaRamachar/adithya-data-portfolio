@@ -1,7 +1,15 @@
 import { motion } from "framer-motion";
-import { Lightbulb, Users, Gauge } from "lucide-react";
+import { Lightbulb, Users, Gauge, Dumbbell, ExternalLink } from "lucide-react";
 
 const products = [
+  {
+    icon: Dumbbell,
+    title: "Personalised Fitness Coach",
+    problem: "Generic workout plans ignore individual fitness levels, goals, and constraints.",
+    solution: "Built an intelligent fitness coaching app that generates personalised workout routines based on user profiles, preferences, and progressive overload principles.",
+    metric: "Adaptive training plans tailored to each user's goals",
+    link: "https://workout-logic-check.lovable.app/",
+  },
   {
     icon: Users,
     title: "Customer Segmentation Engine",
