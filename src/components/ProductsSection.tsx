@@ -56,8 +56,15 @@ const ProductsSection = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
           >
-            <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-              <product.icon className="w-5 h-5 text-primary" />
+            <div className="flex items-center justify-between mb-4">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
+                <product.icon className="w-5 h-5 text-primary" />
+              </div>
+              {product.link && (
+                <a href={product.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs font-sans font-semibold text-primary hover:underline">
+                  Live Demo <ExternalLink className="w-3 h-3" />
+                </a>
+              )}
             </div>
             <h3 className="font-display text-lg font-semibold text-foreground mb-3">{product.title}</h3>
             <div className="space-y-2 mb-4">
