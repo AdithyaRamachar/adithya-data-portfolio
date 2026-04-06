@@ -1,14 +1,89 @@
 import { motion } from "framer-motion";
-import { Brain, Monitor, BarChart3, Cloud, Bot, Package, Settings } from "lucide-react";
 
-const skillGroups = [
-  { icon: Brain, title: "Languages", skills: ["Python", "R", "SQL", "Stata", "SPSS", "Spark"] },
-  { icon: Monitor, title: "Dev Environments", skills: ["VS Code", "Jupyter", "Google Colab", "Postgres", "Databricks"] },
-  { icon: BarChart3, title: "BI Tools", skills: ["Excel", "Tableau", "Power BI"] },
-  { icon: Cloud, title: "Cloud", skills: ["AWS", "GCP", "IBM Watson"] },
-  { icon: Bot, title: "AI Tools", skills: ["Claude Code", "Lovable", "Replit"] },
-  { icon: Package, title: "Project Mgmt", skills: ["Basecamp", "Notion", "JIRA"] },
-  { icon: Settings, title: "Additional", skills: ["Docker", "Dataiku", "REST APIs", "FastAPI"] },
+const CDN = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
+const SI = "https://cdn.simpleicons.org";
+
+interface Skill {
+  name: string;
+  logo: string;
+}
+
+interface SkillGroup {
+  title: string;
+  icon: string;
+  skills: Skill[];
+}
+
+const skillGroups: SkillGroup[] = [
+  {
+    title: "Languages",
+    icon: "🧠",
+    skills: [
+      { name: "Python", logo: `${CDN}/python/python-original.svg` },
+      { name: "R", logo: `${CDN}/r/r-original.svg` },
+      { name: "SQL", logo: `${CDN}/azuresqldatabase/azuresqldatabase-original.svg` },
+      { name: "Stata", logo: `${SI}/stata` },
+      { name: "SPSS", logo: `${SI}/ibm` },
+      { name: "Spark", logo: `${CDN}/apachespark/apachespark-original.svg` },
+    ],
+  },
+  {
+    title: "Dev Environments",
+    icon: "💻",
+    skills: [
+      { name: "VS Code", logo: `${CDN}/vscode/vscode-original.svg` },
+      { name: "Jupyter", logo: `${CDN}/jupyter/jupyter-original.svg` },
+      { name: "Google Colab", logo: `${SI}/googlecolab` },
+      { name: "Postgres", logo: `${CDN}/postgresql/postgresql-original.svg` },
+      { name: "Databricks", logo: `${SI}/databricks` },
+    ],
+  },
+  {
+    title: "BI Tools",
+    icon: "📊",
+    skills: [
+      { name: "Excel", logo: `${SI}/microsoftexcel/217346` },
+      { name: "Tableau", logo: `${SI}/tableau` },
+      { name: "Power BI", logo: `${SI}/powerbi` },
+    ],
+  },
+  {
+    title: "Cloud",
+    icon: "☁️",
+    skills: [
+      { name: "AWS", logo: `${CDN}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+      { name: "GCP", logo: `${CDN}/googlecloud/googlecloud-original.svg` },
+      { name: "IBM Watson", logo: `${SI}/ibmwatson` },
+    ],
+  },
+  {
+    title: "AI Tools",
+    icon: "🤖",
+    skills: [
+      { name: "Claude Code", logo: `${SI}/anthropic` },
+      { name: "Lovable", logo: `${SI}/lovable` },
+      { name: "Replit", logo: `${SI}/replit` },
+    ],
+  },
+  {
+    title: "Project Mgmt",
+    icon: "📦",
+    skills: [
+      { name: "Basecamp", logo: `${SI}/basecamp` },
+      { name: "Notion", logo: `${CDN}/notion/notion-original.svg` },
+      { name: "JIRA", logo: `${CDN}/jira/jira-original.svg` },
+    ],
+  },
+  {
+    title: "Additional",
+    icon: "⚙️",
+    skills: [
+      { name: "Docker", logo: `${CDN}/docker/docker-original.svg` },
+      { name: "Dataiku", logo: `${SI}/dataiku` },
+      { name: "REST APIs", logo: `${CDN}/fastapi/fastapi-original.svg` },
+      { name: "FastAPI", logo: `${CDN}/fastapi/fastapi-original.svg` },
+    ],
+  },
 ];
 
 const SkillsSection = () => (
@@ -35,18 +110,25 @@ const SkillsSection = () => (
             transition={{ duration: 0.4, delay: i * 0.08 }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                <group.icon className="w-4 h-4 text-primary" />
-              </div>
+              <span className="text-xl">{group.icon}</span>
               <h3 className="font-sans font-semibold text-sm text-foreground">{group.title}</h3>
             </div>
             <div className="flex flex-wrap gap-2">
               {group.skills.map((skill) => (
                 <span
-                  key={skill}
-                  className="text-xs font-sans px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground"
+                  key={skill.name}
+                  className="inline-flex items-center gap-1.5 text-xs font-sans px-2.5 py-1.5 rounded-full bg-secondary text-secondary-foreground"
                 >
-                  {skill}
+                  <img
+                    src={skill.logo}
+                    alt={skill.name}
+                    className="w-4 h-4 object-contain"
+                    loading="lazy"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                  {skill.name}
                 </span>
               ))}
             </div>
