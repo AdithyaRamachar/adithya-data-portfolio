@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, ExternalLink } from "lucide-react";
+import ieLogo from "@/assets/ie-logo.png";
 
 const education = [
   {
     school: "IE Business School",
     degree: "Master in Management (Business Analytics)",
     location: "Madrid, Spain",
+    logo: ieLogo,
+    degreeLink: "/ie-degree.pdf",
   },
   {
     school: "Indian Institute of Science Education and Research Tirupati",
@@ -40,13 +43,27 @@ const EducationSection = () => (
             {education.map((edu, i) => (
               <div key={i} className="rounded-2xl bg-card border border-border p-6 shadow-[var(--card-shadow)]">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <GraduationCap className="w-5 h-5 text-primary" />
-                  </div>
+                  {edu.logo ? (
+                    <img src={edu.logo} alt={edu.school} className="w-10 h-10 object-contain flex-shrink-0" />
+                  ) : (
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <GraduationCap className="w-5 h-5 text-primary" />
+                    </div>
+                  )}
                   <div>
                     <h3 className="font-sans font-semibold text-foreground">{edu.school}</h3>
                     <p className="text-sm text-muted-foreground font-sans">{edu.degree}</p>
                     <p className="text-xs text-muted-foreground font-sans mt-1">{edu.location}</p>
+                    {edu.degreeLink && (
+                      <a
+                        href={edu.degreeLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs text-primary hover:underline font-sans mt-2"
+                      >
+                        <ExternalLink className="w-3 h-3" /> View Degree Certificate
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
