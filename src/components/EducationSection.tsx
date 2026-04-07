@@ -31,7 +31,7 @@ const certifications = [
   { name: "Hugging Face – AI Agents Fundamentals", logo: `${SI}/huggingface` },
   { name: "McKinsey & Company Forward Program", logo: mckinseyLogo },
   { name: "AWS Certified Cloud Practitioner", logo: `${CDN}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
-  { name: "IBM Product Manager", logo: `${SI}/ibm` },
+  { name: "IBM Product Manager", logo: ibmLogo },
   { name: "Google Project Management", logo: `${CDN}/google/google-original.svg` },
 ];
 
