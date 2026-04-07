@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { GraduationCap, ExternalLink } from "lucide-react";
 import ieLogo from "@/assets/ie-logo.png";
 import iiserLogo from "@/assets/iiser-logo.png";
+import mckinseyLogo from "@/assets/mckinsey-logo.png";
+import ibmLogo from "@/assets/ibm-logo.png";
 
 const SI = "https://cdn.simpleicons.org";
 const CDN = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
