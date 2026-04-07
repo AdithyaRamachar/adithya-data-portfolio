@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, ExternalLink } from "lucide-react";
+import ieLogo from "@/assets/ie-logo.png";
 
 const education = [
   {
     school: "IE Business School",
     degree: "Master in Management (Business Analytics)",
     location: "Madrid, Spain",
+    logo: ieLogo,
+    degreeLink: "/ie-degree.pdf",
   },
   {
     school: "Indian Institute of Science Education and Research Tirupati",
