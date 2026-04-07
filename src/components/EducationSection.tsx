@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { GraduationCap, ExternalLink } from "lucide-react";
 import ieLogo from "@/assets/ie-logo.png";
+import iiserLogo from "@/assets/iiser-logo.png";
 
 const education = [
   {
@@ -14,6 +15,8 @@ const education = [
     school: "Indian Institute of Science Education and Research Tirupati",
     degree: "BS-MS in Life Sciences",
     location: "Tirupati, India",
+    logo: iiserLogo,
+    degreeLink: "/iiser-degree.pdf",
   },
 ];
 
