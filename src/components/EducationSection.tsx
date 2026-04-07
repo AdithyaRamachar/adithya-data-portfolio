@@ -29,7 +29,7 @@ const certifications = [
   { name: "Databricks Certified Data Engineer Associate", logo: `${SI}/databricks` },
   { name: "Dataiku MLOps Practitioner", logo: `${SI}/dataiku` },
   { name: "Hugging Face – AI Agents Fundamentals", logo: `${SI}/huggingface` },
-  { name: "McKinsey & Company Forward Program", logo: `${SI}/mckinsey/003963` },
+  { name: "McKinsey & Company Forward Program", logo: mckinseyLogo },
   { name: "AWS Certified Cloud Practitioner", logo: `${CDN}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
   { name: "IBM Product Manager", logo: `${SI}/ibm` },
   { name: "Google Project Management", logo: `${CDN}/google/google-original.svg` },
