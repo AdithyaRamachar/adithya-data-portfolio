@@ -88,15 +88,21 @@ const EducationSection = () => (
           <div className="space-y-3">
             {certifications.map((cert, i) => (
               <motion.div
-                key={cert}
+                key={cert.name}
                 className="flex items-center gap-3 rounded-xl bg-card border border-border px-5 py-3.5 shadow-[var(--card-shadow)]"
                 initial={{ opacity: 0, x: 10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: i * 0.06 }}
               >
-                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                <p className="text-sm font-sans text-foreground">{cert}</p>
+                <img
+                  src={cert.logo}
+                  alt={cert.name}
+                  className="w-5 h-5 object-contain flex-shrink-0"
+                  loading="lazy"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                />
+                <p className="text-sm font-sans text-foreground">{cert.name}</p>
               </motion.div>
             ))}
           </div>
