@@ -36,6 +36,8 @@ const skillGroups: SkillGroup[] = [
       { name: "Google Colab", logo: `${SI}/googlecolab` },
       { name: "Postgres", logo: `${CDN}/postgresql/postgresql-original.svg` },
       { name: "Databricks", logo: `${SI}/databricks` },
+      { name: "Windsurf", logo: `${SI}/windsurf` },
+      { name: "Antigravity", logo: `${SI}/antigravity` },
     ],
   },
   {
@@ -45,6 +47,7 @@ const skillGroups: SkillGroup[] = [
       { name: "Excel", logo: `${SI}/microsoftexcel/217346` },
       { name: "Tableau", logo: `${SI}/tableau` },
       { name: "Power BI", logo: `${SI}/powerbi` },
+      { name: "Looker", logo: `${SI}/looker` },
     ],
   },
   {
@@ -63,10 +66,11 @@ const skillGroups: SkillGroup[] = [
       { name: "Claude Code", logo: `${SI}/anthropic` },
       { name: "Lovable", logo: `${SI}/lovable` },
       { name: "Replit", logo: `${SI}/replit` },
+      { name: "n8n", logo: `${SI}/n8n` },
     ],
   },
   {
-    title: "Project Mgmt",
+    title: "Project Management",
     icon: "📦",
     skills: [
       { name: "Basecamp", logo: `${SI}/basecamp` },
@@ -82,6 +86,7 @@ const skillGroups: SkillGroup[] = [
       { name: "Dataiku", logo: `${SI}/dataiku` },
       { name: "REST APIs", logo: `${CDN}/fastapi/fastapi-original.svg` },
       { name: "FastAPI", logo: `${CDN}/fastapi/fastapi-original.svg` },
+      { name: "Qualtrics", logo: `${SI}/qualtrics` },
     ],
   },
 ];
