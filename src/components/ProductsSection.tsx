@@ -1,7 +1,15 @@
 import { motion } from "framer-motion";
-import { Lightbulb, Users, Gauge, Dumbbell, ExternalLink } from "lucide-react";
+import { Lightbulb, Users, Gauge, Dumbbell, ExternalLink, Navigation } from "lucide-react";
 
 const products = [
+  {
+    icon: Navigation,
+    title: "AI-Native Decision Layer for Next-Gen Navigation",
+    problem: "Navigation platforms optimize for directions, whereas riders require real-time decision support under dynamic conditions.",
+    solution: "Built a context-aware, predictive decision engine that operates alongside maps to guide how to ride, not just where to go—shifting navigation from directions to real-time riding intelligence.",
+    metric: "Reduced risk exposure by up to 25% and cognitive load by ~40%",
+    link: "https://ride-wise-path.lovable.app",
+  },
   {
     icon: Dumbbell,
     title: "Personalised Fitness Coach",
