@@ -5,8 +5,10 @@ const products = [
   {
     icon: Navigation,
     title: "AI-Native Decision Layer for Next-Gen Navigation",
-    problem: "Navigation platforms optimize for directions, whereas riders require real-time decision support under dynamic conditions.",
-    solution: "Built a context-aware, predictive decision engine that operates alongside maps to guide how to ride, not just where to go—shifting navigation from directions to real-time riding intelligence.",
+    problem:
+      "Navigation platforms optimize for directions, whereas riders require real-time decision support under dynamic conditions.",
+    solution:
+      "Built a context-aware, predictive decision engine that operates alongside maps to guide how to ride, not just where to go—shifting navigation from directions to real-time riding intelligence.",
     metric: "Reduced risk exposure by up to 25% and cognitive load by ~40%",
     link: "https://ride-wise-path.lovable.app",
   },
@@ -14,7 +16,8 @@ const products = [
     icon: Dumbbell,
     title: "Personalised Fitness Coach",
     problem: "Generic workout plans ignore individual fitness levels, goals, and constraints.",
-    solution: "Built an intelligent fitness coaching app that generates personalised workout routines based on user profiles, preferences, and progressive overload principles.",
+    solution:
+      "Built an intelligent fitness coaching app that generates personalised workout routines based on user profiles, preferences, and progressive overload principles.",
     metric: "Adaptive training plans tailored to each user's goals",
     link: "https://workout-logic-check.lovable.app/",
   },
@@ -22,7 +25,8 @@ const products = [
     icon: Users,
     title: "Customer Segmentation Engine",
     problem: "Marketing campaigns targeted broad audiences with low ROI.",
-    solution: "Built an unsupervised clustering pipeline that segments users by behavior, enabling personalized campaigns.",
+    solution:
+      "Built an unsupervised clustering pipeline that segments users by behavior, enabling personalized campaigns.",
     metric: "3x improvement in campaign targeting precision",
   },
   {
@@ -36,7 +40,8 @@ const products = [
     icon: Lightbulb,
     title: "Experiment Design Framework",
     problem: "Product teams ran A/B tests without statistical rigor, leading to false positives.",
-    solution: "Created a reusable experimentation framework with power analysis, sequential testing, and automated result interpretation.",
+    solution:
+      "Created a reusable experimentation framework with power analysis, sequential testing, and automated result interpretation.",
     metric: "Reduced experiment cycle time by 40%",
   },
 ];
@@ -69,15 +74,24 @@ const ProductsSection = () => (
                 <product.icon className="w-5 h-5 text-primary" />
               </div>
               {product.link && (
-                <a href={product.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs font-sans font-semibold text-primary hover:underline">
+                <a
+                  href={product.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-sans font-semibold text-primary hover:underline"
+                >
                   Live Demo <ExternalLink className="w-3 h-3" />
                 </a>
               )}
             </div>
             <h3 className="font-display text-lg font-semibold text-foreground mb-3">{product.title}</h3>
             <div className="space-y-2 mb-4">
-              <p className="text-sm text-muted-foreground font-sans"><span className="font-semibold text-foreground">Problem:</span> {product.problem}</p>
-              <p className="text-sm text-muted-foreground font-sans"><span className="font-semibold text-foreground">Solution:</span> {product.solution}</p>
+              <p className="text-sm text-muted-foreground font-sans">
+                <span className="font-semibold text-foreground">Problem:</span> {product.problem}
+              </p>
+              <p className="text-sm text-muted-foreground font-sans">
+                <span className="font-semibold text-foreground">Solution:</span> {product.solution}
+              </p>
             </div>
             <div className="px-3 py-2 rounded-lg bg-primary/5 border border-primary/10">
               <p className="text-sm font-sans font-semibold text-primary">{product.metric}</p>
