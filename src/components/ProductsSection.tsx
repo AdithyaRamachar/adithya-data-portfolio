@@ -8,7 +8,7 @@ const products = [
     problem:
       "Navigation platforms optimize for directions, whereas riders require real-time decision support under dynamic conditions.",
     solution:
-      "Built a context-aware, predictive decision engine that operates alongside maps to guide how to ride, not just where to go—shifting navigation from directions to real-time riding intelligence.",
+      "Built a context-aware, predictive decision engine that operates alongside maps to guide how to ride, not just where to go-shifting navigation from directions to real-time riding intelligence.",
     metric: "Reduced risk exposure by up to 25% and cognitive load by ~40%",
     link: "https://ride-wise-path.lovable.app",
   },
